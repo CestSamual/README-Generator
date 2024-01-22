@@ -132,7 +132,7 @@ const writeFile = (data) => {
 // function to initialize program and gather user inputs
 questions()
   .then((answers) => {
-    return generatePage(answers);
+    return generateMarkdown(answers);
   })
   .then((data) => {
     return writeFile(data);
