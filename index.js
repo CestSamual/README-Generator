@@ -117,7 +117,17 @@ const questions = () => {
 };
 
 // function to write README file
-function writeToFile(fileName, data) {}
+const writeFile = (data) => {
+  fs.writeFile("README.md", data, (err) => {
+    //Error if statement
+    if (err) {
+      console.log(err);
+      return;
+    } else {
+      console.log("The README has been successfully generated.");
+    }
+  });
+};
 
 // function to initialize program
 function init() {}
