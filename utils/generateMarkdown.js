@@ -2,37 +2,37 @@
 function generateMarkdown(data) {
   return `# ${data.proTitle}
   
-    ![Github licence](http://img.shields.io/badge/license-${data.license}-blue.svg)
+  ![Github licence](http://img.shields.io/badge/license-${data.license}-blue.svg)
   
     
-    ## Description 
-    ${data.proDesc}
+  ## Description 
+  ${data.proDesc}
   
-    ## Table of Contents
-    * [Installation](#installation)
-    * [Usage](#usage)
-    * [License](#license)
-    * [Contributing](#contributing)
-    * [Tests](#tests)
-    * [Questions](#questions)
+  ## Table of Contents
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [License](#license)
+  * [Contributing](#contributing)
+  * [Tests](#tests)
+  * [Questions](#questions)
     
-    ## Installation 
-    ${data.proInstall}
+  ## Installation 
+  ${data.proInstall}
   
-    ## Usage 
-    ${data.proUsage}
+  ## Usage 
+  ${data.proUsage}
   
-    ## License 
-    This project is license under ${data.proLicense}
+  ## License 
+  This project is license under ${data.proLicense}
   
-    ## Contributing 
-    ${data.proContributor}
+  ## Contributing 
+  ${data.proContributor}
   
-    ## Tests
-    ${data.proTest}
+  ## Tests
+  ${data.proTest}
   
-    ## Questions
-    To get in contact regarding questions or contribution please reach this address - ${data.email}. More projects here: https://github.com/${data.github}.
+  ## Questions
+  To get in contact regarding questions or contribution please reach this address - ${data.email}. More projects here: https://github.com/${data.github}.
 `;
 }
 
