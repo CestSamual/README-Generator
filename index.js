@@ -6,7 +6,7 @@ const { log } = require("console");
 
 // array of questions for user
 const questions = () => {
-  return inquirer.createPromptModule([
+  return inquirer.prompt([
     {
       type: "input",
       name: "email",
@@ -117,8 +117,8 @@ const questions = () => {
 };
 
 // function to write README file
-const writeFile = (data) => {
-  fs.writeFile("README.md", data, (err) => {
+const writeToFile = (data) => {
+  fs.writeFile("./README.md", data, (err) => {
     //Error if statement
     if (err) {
       console.log(err);
@@ -130,13 +130,14 @@ const writeFile = (data) => {
 };
 
 // function to initialize program and gather user inputs
-questions()
-  .then((answers) => {
+questions().then(
+  (answers) => {
     return generateMarkdown(answers);
   })
   .then((data) => {
-    return writeFile(data);
+    return writeToFile(data);
   })
+
 
   //Error catch
   .catch((err) => {
